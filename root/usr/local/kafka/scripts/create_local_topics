@@ -1,0 +1,5 @@
+#!/bin/sh
+
+$KAFKA_HOME/bin/kafka-topics.sh --create --if-not-exists --topic connect-configs --config cleanup.policy=compact --bootstrap-server localhost:9092
+$KAFKA_HOME/bin/kafka-topics.sh --create --if-not-exists --topic connect-offsets --config cleanup.policy=compact --bootstrap-server localhost:9092
+$KAFKA_HOME/bin/kafka-topics.sh --create --if-not-exists --topic connect-status --config cleanup.policy=compact --bootstrap-server localhost:9092

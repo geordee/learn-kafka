@@ -1,0 +1,17 @@
+{
+  "name": "local-elasticsearch-connector",
+  "config": {
+      "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+      "connection.url": "http://localhost:9200",
+      "topics": "hello-elasticsearch",
+      "tasks.max": 1,
+      "key.ignore": "true",
+      "schema.ignore": "true",
+      "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "key.converter.schemas.enable": "false",
+      "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+      "value.converter.schemas.enable": "false",
+      "behavior.on.null.values": "delete",
+      "type.name": "_doc"
+  }
+}
